@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pour toi ❤️ 3 mois</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#f6d9de;--bg2:#e9a9b6;--paper:#fffaf3;--ink:#4a2330;--accent:#a3243f;--shadow:rgba(90,20,40,.28);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a0f19;--bg2:#4a1a2b;--paper:#2f1a22;--ink:#f4dfe3;--accent:#ff8fa5;--shadow:rgba(0,0,0,.5)}}
+:root[data-theme="dark"]{--bg1:#2a0f19;--bg2:#4a1a2b;--paper:#2f1a22;--ink:#f4dfe3;--accent:#ff8fa5;--shadow:rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;background:linear-gradient(160deg,var(--bg1),var(--bg2));font-family:"Cormorant Garamond",Georgia,serif;color:var(--ink);display:flex;justify-content:center;align-items:flex-start;padding:28px 16px 48px;overflow-x:hidden}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.hearts span{position:absolute;bottom:-40px;color:var(--accent);opacity:.25;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+main{position:relative;width:100%;max-width:560px}
+.seal{display:flex;flex-direction:column;align-items:center;gap:14px;margin:12vh auto 0;background:none;border:0;cursor:pointer;color:var(--ink);font:inherit}
+.seal .wax{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#d94b68,var(--accent) 60%,#6e1428);box-shadow:0 10px 24px var(--shadow);display:grid;place-items:center;font-size:48px;color:#ffe3e8;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.07)}}
+.seal span.t{font-size:1.25rem;font-style:italic}
+.seal:focus-visible,.letter:focus-visible{outline:3px solid var(--accent);outline-offset:6px}
+.letter{display:none;background:var(--paper);border-radius:6px;padding:40px 28px 36px;box-shadow:0 18px 50px var(--shadow);border-top:6px solid var(--accent);position:relative;line-height:1.6}
+.letter.open{display:block;animation:unfold .9s ease-out}
+@keyframes unfold{from{opacity:0;transform:translateY(30px) scaleY(.92);transform-origin:top}to{opacity:1;transform:none}}
+h1{font-family:"Great Vibes","Brush Script MT",cursive;font-weight:400;font-size:clamp(2.6rem,10vw,3.6rem);color:var(--accent);margin:0 0 4px;line-height:1.1;text-align:center}
+.sub{text-align:center;font-style:italic;font-size:1.15rem;margin:0 0 26px;opacity:.85}
+.letter p{font-size:1.25rem;margin:0 0 1.1em}
+.dear{font-family:"Great Vibes",cursive;font-size:2rem!important;color:var(--accent)}
+.end{text-align:right;font-size:1.5rem!important;font-style:italic;color:var(--accent);margin-top:1.4em!important}
+.stamp{position:absolute;top:-18px;right:20px;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:22px;box-shadow:0 4px 10px var(--shadow)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<main>
+  <button class="seal" id="seal" aria-label="Ouvrir la lettre">
+    <div class="wax">❤</div>
+    <span class="t">Une lettre pour toi… clique pour l’ouvrir</span>
+  </button>
+
+  <article class="letter" id="letter" tabindex="-1">
+    <div class="stamp">❤</div>
+    <h1>3 mois avec toi</h1>
+    <p class="sub">Une petite lettre de mon cœur</p>
+    <p class="dear">Marouma,</p>
+    <p>Marouma l ghalya naarech kifh bech njm nouseflik hobi lik wlh nhebk aalekher ya rouhi w aslan kelmet nhbk maadech tnjm tousef jemla . 3 mois moch juste souhebtek fehom khw . 3 mois aarafet fehom walid ekher aabed blhk ma kenech aslan injm iaawed iheb blhk</p>
+    <p>.Hedhom ahsen 3 mois fi hyeti maak enti l waket yetaada mahleh w khfif ama l mochkla yetaada fisaa blhk marouma rak  neema kbira wlh w nchlh nkoun njmt naaberlik bilgde wkhw lamahala l klem ma iaaberch . Banouti mahlek aalekher mn dekhel kbal ma tkoun mahlek mel bara w nchlh yestanew fina barcha ayemet hlowa maa baadhna hata khayba aadi raw mouhem aaref ena dima maak w moch bech nsalem fik w nchlh rabi ikaderni w nekhdhek . Nhebk barcha marti ❤️😘</p>
+    <p class="end">À toi, pour toujours ❤</p>
+  </article>
+</main>
+<script>
+(function(){
+  var h=document.getElementById('hearts');
+  for(var i=0;i<14;i++){var s=document.createElement('span');s.textContent='❤';
+    s.style.left=(Math.random()*100)+'%';s.style.fontSize=(14+Math.random()*22)+'px';
+    s.style.animationDuration=(9+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*12)+'s';h.appendChild(s);}
+  var seal=document.getElementById('seal'),letter=document.getElementById('letter');
+  seal.addEventListener('click',function(){
+    seal.style.display='none';letter.classList.add('open');letter.focus({preventScroll:true});window.scrollTo(0,0);
+  });
+})();
+</script>
+</body>
+</html>
